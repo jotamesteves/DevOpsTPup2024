@@ -1,6 +1,10 @@
-name: Python application
+name: CI/CD Pipeline
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
@@ -27,3 +31,5 @@ jobs:
     - name: Push Docker image
       run: |
         docker push yourusername/yourappname
+    - name: Deploy
+      run: echo "Aquí tu script de despliegue si lo necesitas"
