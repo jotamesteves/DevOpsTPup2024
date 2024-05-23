@@ -26,6 +26,7 @@ COPY . .
 
 # Expone el puerto que utiliza Flask
 EXPOSE 5000
+EXPOSE 9100
 
 # Ejecuta la aplicación
-CMD ["/venv/bin/python", "app.py"]
+CMD ["/bin/bash", "-c", "/app/node_exporter & /venv/bin/python app.py"]
