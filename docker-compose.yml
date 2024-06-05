@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   flask-app:
-#    image: jotaesteves/devopstpup2024:latest
-    build: .
+    image: jotaesteves/devopstpup2024:latest
+#    build: .
     ports:
       - "5001:5000"
       - "9100:9100"
